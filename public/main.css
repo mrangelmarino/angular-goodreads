@@ -1,0 +1,148 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #FFFFFF;
+  background: #4ABDAC;
+}
+
+body > *:last-child {
+  margin-bottom: 2em;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  text-align: center;
+  line-height: 1;
+  padding: .5em;
+}
+
+input {
+  width: 100vw;
+  border: 7px solid #DEDEDD;
+  padding: 0.72em;
+  font-size: 1.375em;
+  color: #FC4A1A;
+}
+
+input:focus {
+  outline: 0;
+}
+
+pagination, p.message {
+  display: block;
+  text-align: center;
+  line-height: 1;
+}
+
+pagination p, p.message {
+  padding: 1em;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  color: #DEDEDD;
+}
+
+pagination p {
+  display: flex;
+  flex-direction: column;
+}
+
+p.message {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+pagination span.message {
+  margin-bottom: 1em;
+}
+
+button {
+  padding: 1em;
+  border: 0;
+  border-radius: 0.375em;
+  margin-right: 1em;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  color: #FFFFFF;
+  background: #F7B733;
+  transition: background-color .5s ease;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+button:hover {
+  background: #FF9900;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.book-list-container {
+  max-width: 800px;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+.book {
+  display: flex;
+  padding-bottom: 2em;
+  border-bottom: 1px solid rgba(222,222,222, .25);
+  margin-bottom: 2em;
+}
+
+.book:last-child {
+  margin-bottom: 0;
+}
+
+.book header {
+  order: 2;
+  padding: .5em;
+  padding-left: 1.25em;
+}
+
+.book h2 {
+  margin-bottom: 0.296296296em;
+  font-size: 1.6875em;
+}
+
+.book-author, .book-rating {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  color: #DEDEDD;
+}
+
+.book-cover {
+  flex-grow: 0;
+  flex-shrink: 0;
+  order: 1;
+  width: 98px;
+  height: 150px;
+  background-size: 98px 150px;
+  background-repeat: no-repeat;
+}
+
+.spinner {
+  width: 25vw;
+  height: 25vw;
+  margin: auto;
+  margin-top: 4em;
+  background-color: #FFFFFF;
+
+  border-radius: 100%;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  } 100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
