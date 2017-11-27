@@ -8,7 +8,7 @@ const key = process.env.API_KEY
 
 app.use(cors())
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'docs/public')))
 
 app.get('/books', (req, res) => {
   const goodReadsEndpoint = `https://www.goodreads.com/search/index.xml?key=${key}`
@@ -59,7 +59,7 @@ app.get('/books', (req, res) => {
 });
 
 app.get('/', (req,res) => {
-  res.status(200).sendFile(path.join(__dirname, '/index.html'))
+  res.status(200).sendFile(path.join(__dirname, 'docs/index.html'))
 })
 
 app.listen(3000, ()=> console.log('Server started on port 3000'))
